@@ -7,7 +7,6 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(params[:id])
   end
 
   def new
@@ -27,7 +26,6 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id])
   end
 
   def update
@@ -39,6 +37,7 @@ class TasksController < ApplicationController
       flash.now[:danger] = 'タスクは更新されませんでした'
       render :edit
     end
+    
   end
 
   def destroy
